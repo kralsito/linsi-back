@@ -2,6 +2,9 @@ package com.linsi_backend.linsi_backend.exception.error;
 
 public enum Error implements ErrorCode {
     AUTH_ERROR("0001", "Error al iniciar sesion"),
+    ROLE_NOT_FOUND("0002", "No se encontró el rol"),
+    USER_NOT_LOGIN("0003", "No se encontró un usuario"),
+
 
 
     ;
