@@ -46,7 +46,7 @@ public class MemberController {
     }
 
     @GetMapping
-    @Operation(summary = "Obtiene integrantes, con filtro", security = { @SecurityRequirement(name = "bearer-jwt") })
+    @Operation(summary = "Obtiene integrantes, con filtro")
     public ResponseEntity<List<MemberDTO>> getAll(@ParameterObject MemberFilterDTO filterDTO, @ParameterObject Pageable pageable){
         Page<MemberDTO> response = memberService.getAll(filterDTO, pageable);
         HttpHeaders headers = PaginationUtil.setTotalCountPageHttpHeaders(response);
