@@ -127,6 +127,9 @@ public class MemberServiceImpl implements MemberService {
 
     private Member getMember(Long id) {
         Optional<Member> memberOptional = memberRepository.findById(id);
+        if (memberOptional.isEmpty()) {
+            throw new BadRequestException(Error.MEMBER_NOT_FOUND);
+        }
         return memberOptional.get();
     }
 
