@@ -6,6 +6,8 @@ public enum Error implements ErrorCode {
     USER_NOT_LOGIN("0003", "No se encontró un usuario"),
     AREA_NOT_FOUND("0004", "No se encontró un area"),
     MEMBER_NOT_FOUND("0005", "No se encontró un integrante"),
+    MEMBER_ALREADY_IN_AREA("0006", "El integrante ya se encuentra en el area"),
+    RELATION_NOT_FOUND("0007", "No existe relación entre el integrante y el area"),
 
 
 
