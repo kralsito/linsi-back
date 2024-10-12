@@ -1,9 +1,7 @@
 package com.linsi_backend.linsi_backend.service.mapper;
 
 import com.linsi_backend.linsi_backend.model.Area;
-import com.linsi_backend.linsi_backend.model.Member;
 import com.linsi_backend.linsi_backend.service.dto.request.AreaDTOin;
-import com.linsi_backend.linsi_backend.service.dto.request.MemberDTOin;
 import com.linsi_backend.linsi_backend.service.dto.response.AreaDTO;
 import org.mapstruct.*;
 import org.mapstruct.factory.Mappers;

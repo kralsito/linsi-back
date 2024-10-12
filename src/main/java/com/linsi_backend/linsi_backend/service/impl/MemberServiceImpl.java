@@ -52,6 +52,9 @@ public class MemberServiceImpl implements MemberService {
     public MemberDTO create(MemberDTOin dto) {
         Long userId = AuthSupport.getUserId();
         Optional<User> user = userRepository.findById(userId);
+        if (user.isEmpty()) {
+            throw new BadRequestException(Error.USER_NOT_LOGIN);
+        }
         Member member =  MemberMapper.MAPPER.toEntity(dto);
         member.setUser(user.get());
         member = memberRepository.save(member);
