@@ -1,8 +1,7 @@
 package com.linsi_backend.linsi_backend.service.mapper;
 
-import com.linsi_backend.linsi_backend.model.Areaxmember;
+
 import com.linsi_backend.linsi_backend.model.Projectxmember;
-import com.linsi_backend.linsi_backend.service.dto.request.AreaxmemberDTOin;
 import com.linsi_backend.linsi_backend.service.dto.request.ProjectxmemberDTOin;
 import com.linsi_backend.linsi_backend.service.dto.response.ProjectxmemberDTO;
 import org.mapstruct.Mapper;

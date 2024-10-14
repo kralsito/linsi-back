@@ -46,7 +46,8 @@ public class SecurityConfig {
                                          "/member/**","/member","/area","/area/**",
                                          "/areaxmember","/areaxmember/**",
                                          "/project", "/project/**",
-                                         "/projectxmember", "/projectxmember/**")
+                                         "/projectxmember", "/projectxmember/**",
+                                         "/projectxarea", "/projectxarea/**")
                         .permitAll()
                         .requestMatchers(SWAGGER_WHITELIST)
                         .permitAll()

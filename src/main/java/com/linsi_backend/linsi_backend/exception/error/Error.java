@@ -11,6 +11,7 @@ public enum Error implements ErrorCode {
     PROJECT_NOT_FOUND("0008", "No se encontró el proyecto"),
     MEMBER_ALREADY_IN_PROJECT("0009", "El integrante ya se encuentra en el proyecto"),
     RELATION_PROJECT_MEMBER_NOT_FOUND("0010", "No existe relación entre el integrante y el proyecto"),
+    RELATION_PROJECT_AREA_NOT_FOUND("0010", "No existe relación entre el area y el proyecto"),
 
     ;
 
