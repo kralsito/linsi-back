@@ -9,7 +9,7 @@ public enum Error implements ErrorCode {
     MEMBER_ALREADY_IN_AREA("0006", "El integrante ya se encuentra en el area"),
     RELATION_NOT_FOUND("0007", "No existe relación entre el integrante y el area"),
     PROJECT_NOT_FOUND("0008", "No se encontró el proyecto"),
-
+    MEMBER_ALREADY_IN_PROJECT("0009", "El integrante ya se encuentra en el proyecto"),
 
 
     ;
