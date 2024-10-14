@@ -87,7 +87,7 @@ public class ProjectxmemberServiceImpl implements ProjectxmemberService {
                 .orElseThrow(() -> new BadRequestException(Error.MEMBER_NOT_FOUND));
 
         Projectxmember projectxmember = projectxmemberRepository.findByMemberAndProject(member, project)
-                .orElseThrow(() -> new BadRequestException(Error.RELATION_NOT_FOUND));
+                .orElseThrow(() -> new BadRequestException(Error.RELATION_PROJECT_MEMBER_NOT_FOUND));
 
         projectxmemberRepository.delete(projectxmember);
     }
