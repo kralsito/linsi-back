@@ -45,7 +45,8 @@ public class SecurityConfig {
                         .requestMatchers("/auth/login","/auth/register","/role/**","/role",
                                          "/member/**","/member","/area","/area/**",
                                          "/areaxmember","/areaxmember/**",
-                                         "/project", "/project/**")
+                                         "/project", "/project/**",
+                                         "/projectxmember", "/projectxmember/**")
                         .permitAll()
                         .requestMatchers(SWAGGER_WHITELIST)
                         .permitAll()
