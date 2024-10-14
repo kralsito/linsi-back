@@ -31,7 +31,7 @@ public class ProjectxmemberController {
 
     @GetMapping("/project/{projectId}/members")
     @Operation(summary = "Obtiene todos los integrantes de un proyecto")
-    public ResponseEntity<List<MemberDTO>> getMembersByArea(@PathVariable Long projectId) {
+    public ResponseEntity<List<MemberDTO>> getMembersByProject(@PathVariable Long projectId) {
         List<MemberDTO> members = projectxmemberService.findMembersByProject(projectId);
         return ResponseEntity.ok(members);
     }
