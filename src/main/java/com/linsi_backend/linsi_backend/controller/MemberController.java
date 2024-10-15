@@ -66,7 +66,7 @@ public class MemberController {
                                              @RequestParam String firstName,
                                              @RequestParam String lastName,
                                              @RequestParam String email,
-                                             @RequestParam MultipartFile image,
+                                             @RequestParam(required = false) MultipartFile image,
                                              @RequestParam Long role_id) {
         MemberDTOin dto = new MemberDTOin(firstName, lastName, email, image, role_id);
         MemberDTO response = memberService.update(id, dto);
