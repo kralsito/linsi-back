@@ -8,6 +8,7 @@ public enum Error implements ErrorCode {
     MEMBER_NOT_FOUND("0005", "No se encontró un integrante"),
     MEMBER_ALREADY_IN_AREA("0006", "El integrante ya se encuentra en el area"),
     RELATION_NOT_FOUND("0007", "No existe relación entre el integrante y el area"),
+    NEWS_NOT_FOUND("0008", "No se encontró la noticia"),
 
 
 
