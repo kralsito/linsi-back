@@ -7,6 +7,6 @@ public class NewsDTO {
     private Long id;
     private String title;
     private String description;
-    private UserDTO userId;
-    private Long imageId;
+    private UserDTO user;
+    private String s3Url;
 }

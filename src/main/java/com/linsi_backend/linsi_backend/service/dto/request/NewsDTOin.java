@@ -12,12 +12,4 @@ public class NewsDTOin {
     private String title;
     private String description;
     private MultipartFile image;
-    private Long userId;
-
-    // Constructor sin userId, para cuando solo creas la noticia sin asignar usuario
-    public NewsDTOin(String title, String description, MultipartFile image) {
-        this.title = title;
-        this.description = description;
-        this.image = image;
-    }
 }

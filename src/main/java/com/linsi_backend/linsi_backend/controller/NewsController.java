@@ -61,9 +61,8 @@ public class NewsController {
     public ResponseEntity<NewsDTO> update(@PathVariable Long id,
                                           @RequestParam String title,
                                           @RequestParam String description,
-                                          @RequestParam(required = false) MultipartFile image,
-                                          @RequestParam Long userId) {
-        NewsDTOin dto = new NewsDTOin(title, description, image, userId);
+                                          @RequestParam(required = false) MultipartFile image) {
+        NewsDTOin dto = new NewsDTOin(title, description, image);
         NewsDTO response = newsService.update(id, dto);
         return ResponseEntity.ok(response);
     }
