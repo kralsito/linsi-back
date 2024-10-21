@@ -45,6 +45,7 @@ public class SecurityConfig {
                         .requestMatchers("/auth/login","/auth/register","/role/**","/role",
                                          "/member/**","/member","/area","/area/**",
                                          "/areaxmember","/areaxmember/**",
+                                         "/news", "/news/**",
                                          "/project", "/project/**",
                                          "/projectxmember", "/projectxmember/**",
                                          "/projectxarea", "/projectxarea/**")
