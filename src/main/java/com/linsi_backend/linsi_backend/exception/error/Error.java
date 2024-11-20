@@ -13,6 +13,8 @@ public enum Error implements ErrorCode {
     RELATION_PROJECT_MEMBER_NOT_FOUND("0010", "No existe relación entre el integrante y el proyecto"),
     RELATION_PROJECT_AREA_NOT_FOUND("0011", "No existe relación entre el area y el proyecto"),
     NEWS_NOT_FOUND("0012", "No se encontró la noticia"),
+    REGISTRATION_NOT_FOUND("0013", "No se encontró la inscripción"),
+    INVALID_STATUS_CHANGE("0014", "La inscripción ya fue confirmada"),
     ;
 
     private final String code;
