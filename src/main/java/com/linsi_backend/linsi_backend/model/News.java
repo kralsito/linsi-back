@@ -19,8 +19,10 @@ public class News {
     @Column(nullable = false)
     private LocalDateTime publicationDate;
 
-    @Column(length = 100)
+    @Column(columnDefinition = "TEXT", nullable = false)
     private String description;
+
+
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false, referencedColumnName = "id")
