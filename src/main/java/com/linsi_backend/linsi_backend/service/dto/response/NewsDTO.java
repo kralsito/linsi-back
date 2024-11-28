@@ -1,7 +1,8 @@
 package com.linsi_backend.linsi_backend.service.dto.response;
 
 import lombok.Data;
-import java.time.LocalDateTime;
+
+import java.time.LocalDate;
 
 @Data
 public class NewsDTO {
@@ -9,6 +10,6 @@ public class NewsDTO {
     private String title;
     private String description;
     private UserDTO user;
-    private LocalDateTime publicationDate;
+    private LocalDate publicationDate;
     private String s3Url;
 }
