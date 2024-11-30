@@ -35,7 +35,7 @@ public class NewsController {
     @Operation(summary = "Crea una noticia", security = { @SecurityRequirement(name = "bearer-jwt") })
     public ResponseEntity<NewsDTO> create(@RequestParam String title,
                                           @RequestParam String description,
-                                          @RequestParam (required = false) MultipartFile image) {
+                                          @RequestParam MultipartFile image) {
         NewsDTOin dto = new NewsDTOin(title, description, image);
         NewsDTO response = newsService.create(dto);
         return ResponseEntity.ok(response);
@@ -61,7 +61,7 @@ public class NewsController {
     public ResponseEntity<NewsDTO> update(@PathVariable Long id,
                                           @RequestParam String title,
                                           @RequestParam String description,
-                                          @RequestParam(required = false) MultipartFile image) {
+                                          @RequestParam MultipartFile image) {
         NewsDTOin dto = new NewsDTOin(title, description, image);
         NewsDTO response = newsService.update(id, dto);
         return ResponseEntity.ok(response);
