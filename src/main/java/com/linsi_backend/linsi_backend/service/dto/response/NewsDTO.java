@@ -10,7 +10,7 @@ public class NewsDTO {
     private Long id;
     private String title;
     private String description;
-    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime publicationDate;
     private UserDTO user;
     private String s3Url;

@@ -2,9 +2,7 @@ package com.linsi_backend.linsi_backend.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
-
-import java.time.LocalDate;
-
+import java.time.LocalDateTime;
 
 @Entity
 @Data
@@ -18,12 +16,10 @@ public class News {
     private String title;
 
     @Column(nullable = false)
-    private LocalDate publicationDate;
+    private LocalDateTime publicationDate;
 
     @Column(columnDefinition = "TEXT", nullable = false)
     private String description;
-
-
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false, referencedColumnName = "id")
@@ -34,6 +30,6 @@ public class News {
 
     @PrePersist
     public void prePersist() {
-        this.publicationDate = LocalDate.now();
+        this.publicationDate = LocalDateTime.now();
     }
 }
