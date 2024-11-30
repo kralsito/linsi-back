@@ -50,7 +50,7 @@ public class NewsController {
     }
 
     @GetMapping("/{id}")
-    @Operation(summary = "Obtiene una noticia por id", security = { @SecurityRequirement(name = "bearer-jwt") })
+    @Operation(summary = "Obtiene una noticia por id")
     public ResponseEntity<NewsDTO> getById(@PathVariable Long id) {
         NewsDTO response = newsService.getById(id);
         return ResponseEntity.ok(response);

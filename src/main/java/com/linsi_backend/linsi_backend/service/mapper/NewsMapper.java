@@ -16,6 +16,7 @@ public interface NewsMapper {
 
     @Mapping(ignore = true, target = "id")
     @Mapping(ignore = true, target = "user")
+    @Mapping(ignore = true, target = "publicationDate")
     @Mapping(ignore = true, target = "imageId")
     void update(@MappingTarget News entity, News updatedEntity);
 }
