@@ -17,7 +17,7 @@ public class JwtUtil {
     private static Algorithm signingAlgorithm;
 
     public JwtUtil(
-            @Value("${JWT_SECURITY_KEY}") String secretKey,
+            @Value("${jwt.secret-key}") String secretKey,
             @Value("${security.jwt.expiration-time}") long jwtExpiration
     ) {
         JwtUtil.jwtExpiration = jwtExpiration;

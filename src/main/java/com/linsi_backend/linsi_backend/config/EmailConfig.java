@@ -15,10 +15,10 @@ import java.util.Properties;
 @PropertySource("classpath:email.properties")
 public class EmailConfig {
 
-    @Value("${MAIL}")
+    @Value("${email.username}")
     private String email;
 
-    @Value("${MAIL_PASSWORD}")
+    @Value("${email.password}")
     private String password;
 
     @Bean
