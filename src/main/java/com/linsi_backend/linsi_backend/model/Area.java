@@ -16,7 +16,7 @@ public class Area {
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false, referencedColumnName = "id")
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @OneToMany(mappedBy = "area", cascade = CascadeType.ALL, orphanRemoval = true)

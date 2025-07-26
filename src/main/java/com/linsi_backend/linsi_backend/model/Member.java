@@ -30,7 +30,7 @@ public class Member {
     private Long imageId;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false, referencedColumnName = "id")
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL, orphanRemoval = true)
