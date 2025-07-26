@@ -5,6 +5,7 @@ import com.linsi_backend.linsi_backend.exception.custom.BadRequestException;
 import com.linsi_backend.linsi_backend.exception.error.Error;
 import com.linsi_backend.linsi_backend.model.*;
 import com.linsi_backend.linsi_backend.repository.AreaRepository;
+import com.linsi_backend.linsi_backend.repository.RegistrationRepository;
 import com.linsi_backend.linsi_backend.repository.UserRepository;
 import com.linsi_backend.linsi_backend.repository.specification.AreaSpec;
 import com.linsi_backend.linsi_backend.service.AreaService;
@@ -19,6 +20,7 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -28,11 +30,15 @@ public class AreaServiceImpl implements AreaService {
 
     private final UserRepository userRepository;
 
+    private final RegistrationRepository registrationRepository;
+
     public AreaServiceImpl(AreaRepository areaRepository,
-                             UserRepository userRepository)
+                           UserRepository userRepository,
+                           RegistrationRepository registrationRepository)
     {
         this.areaRepository = areaRepository;
         this.userRepository = userRepository;
+        this.registrationRepository = registrationRepository;
     }
 
     @Override
@@ -80,12 +86,18 @@ public class AreaServiceImpl implements AreaService {
 
     @Override
     @Transactional
-    public void delete(Long id)  {
+    public void delete(Long id) {
         Long userId = AuthSupport.getUserId();
-        Area area = getArea(id);
-        if(userId == null){
+        if (userId == null) {
             throw new BadRequestException(Error.USER_NOT_LOGIN);
         }
+        Area area = getArea(id);
+        List<Registration> registrations = registrationRepository.findByArea(area);
+        if (!registrations.isEmpty()) {
+            registrations.forEach(registration -> registration.setArea(null));
+            registrationRepository.saveAll(registrations);
+        }
+
         areaRepository.delete(area);
     }
 

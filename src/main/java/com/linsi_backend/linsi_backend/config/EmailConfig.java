@@ -41,6 +41,9 @@ public class EmailConfig {
         props.put("mail.smtp.starttls.enable", "true");
         props.put("mail.smtp.host", "smtp.gmail.com");
         props.put("mail.smtp.port", "587");
+        props.put("mail.transport.protocol", "smtp");
+        props.put("mail.debug", "true");
+
         return props;
     }
 

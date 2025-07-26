@@ -24,4 +24,5 @@ public class Area {
 
     @OneToMany(mappedBy = "area", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Projectxarea> areaxprojects;
+
 }

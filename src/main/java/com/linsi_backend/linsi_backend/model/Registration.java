@@ -31,7 +31,7 @@ public class Registration {
     private String email;
 
     @ManyToOne
-    @JoinColumn(name = "area_id", nullable = false, referencedColumnName = "id")
+    @JoinColumn(name = "area_id", nullable = true, referencedColumnName = "id")
     private Area area;
 
     @Enumerated(EnumType.STRING)
