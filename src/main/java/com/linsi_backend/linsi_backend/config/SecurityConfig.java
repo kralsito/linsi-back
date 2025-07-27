@@ -79,12 +79,11 @@ public class SecurityConfig {
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
 
-        // Permitir múltiples orígenes incluyendo localhost y Vercel
         corsConfiguration.setAllowedOriginPatterns(Arrays.asList(
                 "http://localhost:*",
                 "https://*.vercel.app",
-                "https://tu-frontend.vercel.app", // Reemplaza con tu dominio real
-                "https://linsi-back-production.up.railway.app" // Tu backend para self-requests
+                "https://linsi.vercel.app",
+                "https://linsi-back-production.up.railway.app"
         ));
 
         // Métodos HTTP permitidos
