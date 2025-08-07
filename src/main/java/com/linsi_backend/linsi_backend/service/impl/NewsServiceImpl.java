@@ -91,6 +91,7 @@ public class NewsServiceImpl implements NewsService {
             imageService.deleteImage(news.getId(), ImageType.NEWS);
             Long imageId = imageService.uploadImage(dto.getImage(), ImageType.NEWS, news.getId());
             news.setImageId(imageId);
+            newsRepository.save(news);
         }
         newsRepository.save(news);
         NewsDTO newsDTO = NewsMapper.MAPPER.toDto(news);
